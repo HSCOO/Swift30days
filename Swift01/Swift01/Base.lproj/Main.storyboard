@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Swfit01" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0dv-Vl-Kkg">
+                                <rect key="frame" x="0.0" y="44" width="414" height="349.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O9Y-Du-RVE">
+                                        <rect key="frame" x="179" y="106" width="56" height="137"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-UltraLight" family="Avenir Next" pointSize="100"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sJv-wS-sat">
+                                        <rect key="frame" x="266" y="19" width="112" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="fn8-4L-ugX"/>
+                                            <constraint firstAttribute="width" constant="112" id="haj-Wt-BKU"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                        <state key="normal" title="Reset">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="resetClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LcR-k3-mHn"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="O9Y-Du-RVE" firstAttribute="centerX" secondItem="0dv-Vl-Kkg" secondAttribute="centerX" id="LVG-60-eSZ"/>
+                                    <constraint firstItem="sJv-wS-sat" firstAttribute="top" secondItem="0dv-Vl-Kkg" secondAttribute="top" constant="19" id="O2t-Ui-duf"/>
+                                    <constraint firstAttribute="trailing" secondItem="sJv-wS-sat" secondAttribute="trailing" constant="36" id="TIw-n5-TKA"/>
+                                    <constraint firstItem="O9Y-Du-RVE" firstAttribute="centerY" secondItem="0dv-Vl-Kkg" secondAttribute="centerY" id="eDB-s0-1tv"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H4G-8Z-hXS">
+                                <rect key="frame" x="0.0" y="393.5" width="207" height="468.5"/>
+                                <color key="backgroundColor" name="playColor"/>
+                                <state key="normal" image="play"/>
+                                <connections>
+                                    <action selector="playClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MUl-4z-Hhm"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wXc-bN-9HC">
+                                <rect key="frame" x="207" y="393.5" width="207" height="468.5"/>
+                                <color key="backgroundColor" name="pauseColor"/>
+                                <state key="normal" image="pause"/>
+                                <connections>
+                                    <action selector="pauseClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iTi-iS-UUG"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" name="backgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="wXc-bN-9HC" firstAttribute="top" secondItem="H4G-8Z-hXS" secondAttribute="top" id="6sP-Ov-lLU"/>
+                            <constraint firstItem="wXc-bN-9HC" firstAttribute="leading" secondItem="H4G-8Z-hXS" secondAttribute="trailing" id="97i-6v-tIF"/>
+                            <constraint firstItem="wXc-bN-9HC" firstAttribute="width" secondItem="H4G-8Z-hXS" secondAttribute="width" id="H4d-XG-TTP"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="H4G-8Z-hXS" secondAttribute="bottom" id="Oa1-qh-tcu"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="0dv-Vl-Kkg" secondAttribute="trailing" id="OlR-oA-drO"/>
+                            <constraint firstItem="wXc-bN-9HC" firstAttribute="height" secondItem="H4G-8Z-hXS" secondAttribute="height" id="RQJ-0z-9hL"/>
+                            <constraint firstItem="H4G-8Z-hXS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="U9s-lo-cu2"/>
+                            <constraint firstItem="wXc-bN-9HC" firstAttribute="leading" secondItem="H4G-8Z-hXS" secondAttribute="trailing" id="Vre-Jn-lC3"/>
+                            <constraint firstItem="H4G-8Z-hXS" firstAttribute="top" secondItem="0dv-Vl-Kkg" secondAttribute="bottom" id="WUp-Sq-bku"/>
+                            <constraint firstItem="wXc-bN-9HC" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="Ya0-Zb-Zc4"/>
+                            <constraint firstItem="0dv-Vl-Kkg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="agh-fR-vII"/>
+                            <constraint firstItem="wXc-bN-9HC" firstAttribute="bottom" secondItem="H4G-8Z-hXS" secondAttribute="bottom" id="eNa-Ph-DfW"/>
+                            <constraint firstItem="0dv-Vl-Kkg" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.39" id="em7-XA-l0n"/>
+                            <constraint firstItem="0dv-Vl-Kkg" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="nis-RT-cd7"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="wXc-bN-9HC" secondAttribute="trailing" id="syo-5p-UNP"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="pasueButton" destination="wXc-bN-9HC" id="QM3-lg-thw"/>
+                        <outlet property="playButton" destination="H4G-8Z-hXS" id="FaE-WV-TlL"/>
+                        <outlet property="resetButton" destination="sJv-wS-sat" id="h5I-uc-t7q"/>
+                        <outlet property="secondLabel" destination="O9Y-Du-RVE" id="4qy-LA-sam"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="133.92857142857142"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="pause" width="42" height="56"/>
+        <image name="play" width="48" height="61"/>
+        <namedColor name="backgroundColor">
+            <color red="0.035294117647058823" green="0.0078431372549019607" blue="0.13333333333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="pauseColor">
+            <color red="0.40000000000000002" green="0.74509803921568629" blue="0.031372549019607843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="playColor">
+            <color red="0.32941176470588235" green="0.36470588235294116" blue="0.9882352941176471" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
