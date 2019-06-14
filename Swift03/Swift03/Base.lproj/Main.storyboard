@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="e1A-bx-f61">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Root View Controller-->
+        <scene sceneID="vvE-Vi-N6X">
+            <objects>
+                <tableViewController id="oZT-as-oIC" customClass="ViewController" customModule="Swift03" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="EHf-2M-eoi">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="sectionIndexBackgroundColor" red="0.036564279349999999" green="0.0072344690560000001" blue="0.1348475069" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="VideoCell" rowHeight="220" id="mhM-fC-XAU" customClass="VideoCell" customModule="Swift03" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="220"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="mhM-fC-XAU" id="37u-iq-HP3">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="220"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="videoScreenshot01" translatesAutoresizingMaskIntoConstraints="NO" id="QGp-1x-sRK">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="220.5"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="220" id="Udq-bz-1Io"/>
+                                            </constraints>
+                                        </imageView>
+                                        <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h1b-e1-EoD">
+                                            <rect key="frame" x="177" y="80.5" width="60" height="60"/>
+                                            <state key="normal" image="playBtn"/>
+                                            <state key="disabled" image="playBtn"/>
+                                        </button>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Emoji Among Us" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kmR-Kk-9pO">
+                                            <rect key="frame" x="147.5" y="150.5" width="119" height="20"/>
+                                            <fontDescription key="fontDescription" name="AvenirNext-Heavy" family="Avenir Next" pointSize="14"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Youtube - 06:32" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RGB-Wh-X5V">
+                                            <rect key="frame" x="170.5" y="175.5" width="73" height="14"/>
+                                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="10"/>
+                                            <color key="textColor" red="0.99987119436264038" green="0.99998223781585693" blue="0.99984109401702881" alpha="0.51452803938356162" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="QGp-1x-sRK" firstAttribute="top" secondItem="37u-iq-HP3" secondAttribute="top" id="4kk-eE-TKJ"/>
+                                        <constraint firstItem="RGB-Wh-X5V" firstAttribute="top" secondItem="kmR-Kk-9pO" secondAttribute="bottom" constant="5" id="GyS-UI-Bhf"/>
+                                        <constraint firstAttribute="trailing" secondItem="QGp-1x-sRK" secondAttribute="trailing" id="Kh5-nM-7XZ"/>
+                                        <constraint firstItem="QGp-1x-sRK" firstAttribute="leading" secondItem="37u-iq-HP3" secondAttribute="leading" id="KiX-R1-Kxd"/>
+                                        <constraint firstItem="h1b-e1-EoD" firstAttribute="centerY" secondItem="QGp-1x-sRK" secondAttribute="centerY" id="Osx-ub-sUh"/>
+                                        <constraint firstAttribute="bottom" secondItem="QGp-1x-sRK" secondAttribute="bottom" id="VZV-92-FCK"/>
+                                        <constraint firstItem="kmR-Kk-9pO" firstAttribute="top" secondItem="h1b-e1-EoD" secondAttribute="bottom" constant="10" id="hr9-px-Y4b"/>
+                                        <constraint firstItem="RGB-Wh-X5V" firstAttribute="centerX" secondItem="37u-iq-HP3" secondAttribute="centerX" id="iWq-LV-H3H"/>
+                                        <constraint firstItem="kmR-Kk-9pO" firstAttribute="centerX" secondItem="37u-iq-HP3" secondAttribute="centerX" id="o7B-CL-l4v"/>
+                                        <constraint firstItem="h1b-e1-EoD" firstAttribute="centerX" secondItem="QGp-1x-sRK" secondAttribute="centerX" id="oZZ-6d-sJv"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="videoScreenShot" destination="QGp-1x-sRK" id="8xY-1g-5sb"/>
+                                    <outlet property="videoSourceLabel" destination="RGB-Wh-X5V" id="QCi-7W-do2"/>
+                                    <outlet property="videoTitleLabel" destination="kmR-Kk-9pO" id="OOk-N8-kSF"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="oZT-as-oIC" id="3Ms-8P-Y2B"/>
+                            <outlet property="delegate" destination="oZT-as-oIC" id="fD2-HV-2RI"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Root View Controller" id="Bx1-io-F8L"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Qr5-5S-LGN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="227.536231884058" y="117.85714285714285"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="29D-nt-02m">
+            <objects>
+                <navigationController id="e1A-bx-f61" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="DL6-4d-i8A">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.036564279349999999" green="0.0072344690560000001" blue="0.1348475069" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="oZT-as-oIC" kind="relationship" relationship="rootViewController" id="ywI-ba-zMS"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="a3X-eN-zfA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-691" y="118"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="playBtn" width="60" height="60"/>
+        <image name="videoScreenshot01" width="375" height="220"/>
+    </resources>
+</document>
