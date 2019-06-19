@@ -12,6 +12,7 @@ import AVFoundation
 
 class ViewController: UITableViewController {
 
+   // 数据懒加载
    lazy var videos:[Video] = {
         return [
             Video(screenShot: "videoScreenshot01", title: "Introduce 3DS Mario", source: "Youtube - 06:32"),
@@ -58,10 +59,10 @@ class ViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 
         let mapFile = Bundle.main.path(forResource: "emoji zone", ofType: "mp4")
-
+        // 播放器
         player = AVPlayer.init(url: URL(fileURLWithPath: mapFile!))
         playViewController.player = player
-
+        // 播放
         present(playViewController, animated: true) {
             self.playViewController.player?.play()
         }
