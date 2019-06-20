@@ -28,12 +28,14 @@ class ViewController: UIViewController {
     
         scroll.contentSize = CGSize.init(width: width * 3, height: height)
         scroll.isPagingEnabled = true
+        scroll.backgroundColor = UIColor.clear
     
         return scroll
     }()
     
     lazy var centerView: CameraView = {
         let cameraView = CameraView.init(frame: CGRect.init(x: screenWidth, y: 0, width: screenWidth, height: screenHeight))
+        cameraView.backgroundColor = UIColor.clear
         return cameraView
     }()
     

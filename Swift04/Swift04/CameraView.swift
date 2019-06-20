@@ -13,6 +13,7 @@ class CameraView: UIView,AVCapturePhotoCaptureDelegate{
     
     lazy var tempImageView: UIImageView = {
         let imageView = UIImageView()
+        imageView.frame = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.size.width, height: UIScreen.main.bounds.size.height)
         imageView.isHidden = true
         return imageView
     }()
@@ -38,7 +39,7 @@ class CameraView: UIView,AVCapturePhotoCaptureDelegate{
     }
     
     func addPhotoView(){
-        previewLayer?.frame = CGRect.init(x: 0, y: 0, width: UIScreen.main.bounds.size.width, height: UIScreen.main.bounds.size.width)
+        previewLayer?.frame = CGRect.init(x: 0, y: 0, width: UIScreen.main.bounds.size.width, height: UIScreen.main.bounds.size.height)
         
         let backCamera = AVCaptureDevice.default(for: .video)
         
@@ -65,10 +66,10 @@ class CameraView: UIView,AVCapturePhotoCaptureDelegate{
                     
                     if let captureSessionTemp = captureSession{
                         previewLayer = AVCaptureVideoPreviewLayer(session: captureSessionTemp)
-                        previewLayer?.videoGravity = AVLayerVideoGravity.resizeAspectFill
+                        previewLayer?.videoGravity = AVLayerVideoGravity.resizeAspect
                         previewLayer?.connection?.videoOrientation = AVCaptureVideoOrientation.portrait
                         
-                        layer.addSublayer(previewLayer!)
+                        self.layer.addSublayer(previewLayer!)
                         captureSession?.startRunning()
                     }
                 }
